@@ -29,7 +29,7 @@ public class Main {
         Optional<Message> messageOptional = repository.findById(5L);
         if (messageOptional.isPresent()) {
             Message message = messageOptional.get();
-            message.setText("Hello World, WASSUP!");
+            message.setText("CHECK CHECK CHECK!");
             message.setDate(null);
             repository.update(message);
         } else {

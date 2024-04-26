@@ -74,7 +74,7 @@ public class MessagesRepositoryJdbcImpl implements MessagesRepository{
         try {
             Connection connection = dataSource.getConnection();
             Statement statement = connection.createStatement();
-            statement.executeUpdate("UPDATE chat.message SET text = '" + message.getText() + "' WHERE id =" + messageId);
+            statement.executeUpdate("UPDATE chat.message SET text = '" + message.getText() + "', time = " + message.getDate() + " WHERE id =" + messageId);
         } catch (SQLException e){
             e.printStackTrace();
         }
